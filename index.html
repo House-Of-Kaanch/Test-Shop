@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>House of Kaanch · A little everyday magic</title>
+  <meta name="description" content="House of Kaanch — whimsical, reflective, a little magical. Explore our illustrated storefront concept." />
+  <meta property="og:title" content="House of Kaanch" />
+  <meta property="og:description" content="For the dreamers who find beauty in the everyday." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Announcement marquee -->
+  <div class="marquee" aria-label="Announcements">
+    <div class="marquee__track">
+      <span>✧ The daydream edit</span><span><b>House of Kaanch</b> · a little everyday magic</span><span>✧ Whimsical. Reflective. A little magical.</span><span>For the beauty in the everyday</span>
+      <span>✧ The daydream edit</span><span><b>House of Kaanch</b> · a little everyday magic</span><span>✧ Whimsical. Reflective. A little magical.</span><span>For the beauty in the everyday</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="#" class="logo" aria-label="House of Kaanch home"><span class="logo__house">HOUSE OF</span><span class="logo__name">KAANCH<span aria-hidden="true">✧</span></span></a>
+    <nav class="nav" id="nav">
+      <a href="#shop">Shop all</a>
+      <a href="#shop" data-filter="set">Sets</a>
+      <a href="#shop" data-filter="lehenga">Lehenga</a>
+      <a href="#shop" data-filter="top">Tops/Kurta</a>
+      <a href="#shop" data-filter="bottom">Bottoms</a>
+      <a href="#quiz">Stylist</a>
+      <a href="#prints">Prints</a>
+      <a href="#gift">Gift Card</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="header__actions">
+      <button class="cart-btn" id="cartOpen" aria-label="Open cart">Bag (<span id="cartCount">0</span>)</button>
+      <button class="burger" id="burger" aria-controls="nav" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__text">
+        <p class="eyebrow">Chapter 01 · The daydream edit</p>
+        <h1>A little whimsy.<br><em>A little you.</em></h1>
+        <p class="lede">For the dreamers, the wanderers, the beautifully unexpected. A world of playful prints and everyday stories, seen through a little Kaanch.</p>
+        <div class="hero__cta">
+          <a href="#shop" class="btn btn--dark">Explore the edit</a>
+          <a href="#prints" class="btn btn--ghost">Discover the prints</a>
+        </div>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <div class="swatch swatch--big p-stripe"></div>
+        <div class="swatch swatch--mid p-check"></div>
+        <div class="swatch swatch--sm p-dots"></div>
+        <figure class="hero__portrait"><img src="assets/kaanch-logo.png" alt="" width="1494" height="1615"><figcaption>Once upon an everyday.</figcaption></figure>
+        <span class="sticker">Sage × blush<br>a little magic</span>
+      </div>
+    </section>
+
+    <!-- Quiz teaser -->
+    <a href="#quiz" class="teaser">
+      <span class="teaser__tag">The Kaanch muse ✧</span>
+      <span><b>Which Kaanch muse are you?</b> Five little questions. Find your kind of magic.</span>
+      <span class="teaser__go">Find your muse →</span>
+    </a>
+
+    <!-- Pattern ribbon -->
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon__track">
+        <span>Sage × Blush × Berry × Daydreams × Little wonders × House of Kaanch ×</span>
+        <span>Sage × Blush × Berry × Daydreams × Little wonders × House of Kaanch ×</span>
+      </div>
+    </div>
+
+    <!-- Shop -->
+    <section class="section" id="shop">
+      <p class="eyebrow">The first collection · a world of little wonders</p>
+      <h2>Wear a little <em>wonder.</em></h2>
+      <p class="sub">Unexpected pairings. Familiar feelings. Find a piece that feels like you.</p>
+      <p class="catalogue-note">Concept collection · sample names, prices & pattern artwork</p>
+      <div class="filters" role="group" aria-label="Filter products">
+        <button class="chip is-on" data-filter="all">All pieces</button>
+        <button class="chip" data-filter="set">Sets</button>
+        <button class="chip" data-filter="lehenga">Lehenga</button>
+        <button class="chip" data-filter="top">Tops</button>
+        <button class="chip" data-filter="bottom">Bottoms</button>
+      </div>
+      <div class="grid" id="productGrid"></div>
+    </section>
+
+    <!-- Gift -->
+    <section class="gift" id="gift">
+      <div class="gift__card" aria-hidden="true">
+        <span class="gift__brand">HOUSE OF KAANCH <span aria-hidden="true">✧</span></span>
+        <span class="gift__amt" id="giftAmtPreview">₹2,000</span>
+        <span class="gift__note" id="giftNotePreview">for: Behen</span>
+      </div>
+      <div class="gift__text">
+        <p class="eyebrow">A little something · दिल से</p>
+        <h2>A little magic.<br><em>Just for them.</em></h2>
+        <p>For someone who makes the ordinary feel a little extraordinary. Choose a person, choose a little magic, and make this gift-card preview your own.</p>
+        <div class="pills" id="giftFor">
+          <button class="pill">Premika</button><button class="pill">Premi</button><button class="pill is-on">Behen</button><button class="pill">Mummy</button><button class="pill">Saasu Maa</button>
+        </div>
+        <div class="pills" id="giftAmt">
+          <button class="pill">₹1,000</button><button class="pill is-on">₹2,000</button><button class="pill">₹3,500</button><button class="pill">₹5,000</button>
+        </div>
+        <button class="btn btn--dark" id="giftAdd">Add gift preview →</button>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <p class="deva">हर रोज़, थोड़ा जादू।</p>
+      <h2>For the beauty<br><em>in the everyday.</em></h2>
+      <p>A fleeting reflection. A flower on the windowsill. The familiar feeling of being entirely yourself. House of Kaanch begins with these little things.</p>
+      <p>Whimsical. Reflective. A little magical. A world for the dreamers who find beauty in the everyday — and carry a little of it with them.</p>
+    </section>
+
+    <!-- Prints -->
+    <section class="section" id="prints">
+      <p class="eyebrow deva-sm">The pattern cabinet</p>
+      <h2>Eight little <em>daydreams.</em></h2>
+      <p class="sub">A palette of possibilities. Tap a pattern to explore its matching pieces.</p>
+      <div class="prints" id="printGrid"></div>
+    </section>
+
+    <!-- Quiz -->
+    <section class="quiz" id="quiz">
+      <div class="quiz__box">
+        <p class="eyebrow">Find your muse</p>
+        <h2 id="qTitle">Which Kaanch muse are you?</h2>
+        <div id="qBody"></div>
+        <div class="quiz__bar"><span id="qBar"></span></div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="news">
+      <h2 class="deva">Letters from Kaanch.</h2>
+      <p>New chapters, lovely things, and notes from our little world.</p>
+      <form id="newsForm" class="news__form">
+        <label class="sr" for="email">Email</label>
+        <input id="email" type="email" required placeholder="you@example.com" />
+        <button class="btn btn--dark" type="submit">Preview signup</button>
+      </form>
+      <p class="tiny">Preview only. No email address is saved or subscribed.</p>
+      <p class="news__msg" id="newsMsg" role="status"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand"><a href="#" class="logo"><span class="logo__house">HOUSE OF</span><span class="logo__name">KAANCH<span aria-hidden="true">✧</span></span></a><p>Whimsical. Reflective. A little magical.</p></div>
+    <div><h4>Shop</h4><a href="#shop">Shop all</a><a href="#shop" data-filter="set">Sets</a><a href="#gift">Gift Card</a><a href="#quiz">Find your muse</a></div>
+    <div><h4>Help</h4><button class="footer-link" data-info="Shipping policy">Shipping policy</button><button class="footer-link" data-info="Refund policy">Refund policy</button><button class="footer-link" data-info="Privacy policy">Privacy policy</button><button class="footer-link" data-info="Contact">Contact</button></div>
+    <p class="footer__legal">© <span id="year"></span> House of Kaanch · For the beauty in the everyday.</p>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Cart" aria-hidden="true" inert>
+    <div class="drawer__head"><h3>Your little collection</h3><button id="cartClose" aria-label="Close cart">×</button></div>
+    <ul class="drawer__list" id="cartList"></ul>
+    <div class="drawer__foot">
+      <div class="drawer__total"><span>Total</span><b id="cartTotal">₹0</b></div>
+      <button class="btn btn--dark btn--full" id="checkout">Preview checkout</button>
+      <p class="tiny">Design preview · no payments, orders or gift cards are issued.</p>
+    </div>
+  </aside>
+
+  <dialog id="mixDialog" aria-labelledby="mixTitle"><div class="modal-head"><h2 id="mixTitle">Your own little pairing.</h2><button data-close-dialog aria-label="Close mix builder">×</button></div><p>Pair a top with a bottom. Both pieces will be added to your preview bag.</p><form id="mixForm"><label>Choose a top<select id="mixTop"></select></label><label>Choose a bottom<select id="mixBottom"></select></label><p id="mixTotal" class="mix-total" aria-live="polite"></p><button class="btn btn--dark">Add the pairing</button></form></dialog>
+  <dialog id="infoDialog" aria-labelledby="infoTitle"><div class="modal-head"><h2 id="infoTitle"></h2><button data-close-dialog aria-label="Close details">×</button></div><p id="infoBody"></p></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
